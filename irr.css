@@ -1,1 +1,46 @@
+*{
 
+padding:0;
+margin:0;
+    
+box-sizing:border-box ;
+
+
+}
+h2{
+    text-align:center;
+}
+
+body {
+    
+}
+.formDiv{
+    padding:10px;
+}
+.formDiv form{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    border:5px solid grey;
+    width:100%;
+    height:500px;
+    padding:10px;
+    
+    
+}
+button{
+    padding:5px;
+    margin:15px 0;
+    background-color:#ff2b80;
+}
+input{
+    width:150px;
+    padding:2px;
+    text-align:center;
+}
+.inputDiv{
+display:flex;
+justify-content:space-around;
+margin-top:10px;
+    
+      }
