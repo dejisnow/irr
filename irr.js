@@ -21,30 +21,36 @@ NPVb = NPV at Rb
   let display = document.querySelector(".display")
     btn.addEventListener("click",(e)=>{
         e.preventDefault()
- //    console.log(irr(hR,lR,highNpv,lowNpv))
-     console.log(add(highNpv,lowInt,lowNpv,highInt ))
+ console.log(irr())
+    // console.log(add())
     })
     
     // console.log(irr(0.15,0.1,-28160,45358))
     
     
     //Input Variables 
-    let highNpv = npvH.value
-    let lowNpv = npvL.value
-    let highInt = hR.value
-    let lowInt = lR.value
     
-    function add(a,b,c,d){
-       return a+b+c+d 
+    
+    function add(){
+    
+    
+   return highNpv + lowNpv + highInt + lowInt 
         
     }
     
     
-    function irr(rH,rL,netH,netL){
-   let npvRatio = (netL *(rH - rL)/(netL-netH))
-    console.log(typeof(rH))
+    function irr(){
+    let highNpv =parseInt(npvH.value)
+    let lowNpv = parseInt(npvL.value)
+    let highInt =parseInt(hR.value)
+    let lowInt =parseInt(lR.value)
     
-    return rL + npvRatio 
+   let npvRatio = lowNpv /(lowNpv - (highNpv))
+   //we are getting zero when we deduct
+   let npvR =(highInt - lowInt ) 
+   
+
+    return  npvR
         
         
     }
@@ -56,4 +62,4 @@ NPVb = NPV at Rb
     
     
     
-}
+   }
