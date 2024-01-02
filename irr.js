@@ -42,15 +42,16 @@ NPVb = NPV at Rb
     function irr(){
     let highNpv =parseInt(npvH.value)
     let lowNpv = parseInt(npvL.value)
-    let highInt =parseInt(hR.value)
-    let lowInt =parseInt(lR.value)
+    let highInt =parseInt(hR.value)/100
+    let lowInt =parseInt(lR.value)/100
     
    let npvRatio = lowNpv /(lowNpv - (highNpv))
-   //we are getting zero when we deduct
-   let npvR =(highInt - lowInt ) 
+   
+   let npvR =(highInt - lowInt) 
+   let result = npvRatio * npvR
    
 
-    return  npvR
+    return lowInt + result 
         
         
     }
@@ -62,4 +63,4 @@ NPVb = NPV at Rb
     
     
     
-   }
+}
