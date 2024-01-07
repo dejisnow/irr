@@ -19,9 +19,16 @@ NPVb = NPV at Rb
   let hR = document.querySelector(".highR")
   let lR = document.querySelector(".lowR")
   let display = document.querySelector(".display")
+  let displayDiv = document.querySelector(".displayDiv")
+  let irrValue = document.querySelector(".irrValue")
+  
     btn.addEventListener("click",(e)=>{
+   
         e.preventDefault()
- console.log(irr())
+        display.style.display = "block"
+         let result = irr()
+       irrValue.innerHTML = `${result.toFixed(2) * 100}% `
+ 
     // console.log(add())
     })
     
